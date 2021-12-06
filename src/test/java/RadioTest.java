@@ -1,7 +1,5 @@
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class RadioTest {
 
     @Test
@@ -9,6 +7,7 @@ class RadioTest {
         Radio radio = new Radio();
         int expacted = 1;
         int actual = radio.increaseVolume();
+        return actual;
     }
 
     @Test
@@ -17,26 +16,30 @@ class RadioTest {
         int expacted = 0;
         int actual = radio.decreaseVolume();
 
+        return actual;
     }
 
     @Test
-    void next() {
+    int next() {
         Radio radio = new Radio();
         int expacted = 1;
         int actual = radio.next();
+        return actual;
     }
 
     @Test
-    void prev() {
+    int prev() {
         Radio radio = new Radio();
         int expacted = 9;
         int actual = radio.prev();
+        return actual;
     }
 
     @Test
-    void setCurrentStationNum() {
+    int setCurrentStationNum() {
         Radio radio = new Radio();
         int expacted = 0;
         int actual = 0;
+        return actual;
     }
 }

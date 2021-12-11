@@ -6,6 +6,7 @@ public class Radio {
         if (currentVolume < 10) {
             currentVolume = currentVolume + 1;
         }
+
         return currentVolume;
     }
 
@@ -29,13 +30,14 @@ public class Radio {
 
 
     public int prev() {
+        if (currentStationNum > 1) {
+            currentStationNum = currentStationNum - 1;
+        }
         if (currentStationNum == 0) {
             currentStationNum = 9;
 
         }
-        if (currentStationNum > 1) {
-            currentStationNum = currentStationNum - 1;
-        }
+
         return currentStationNum;
 
     }

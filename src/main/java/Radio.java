@@ -1,6 +1,6 @@
 public class Radio {
-    public int currentVolume = 0;
-    public int currentStationNum = 0;
+    private int currentVolume = 0;
+    private int currentStationNum = 1;
 
     public int increaseVolume() {
         if (currentVolume < 10) {
@@ -30,8 +30,10 @@ public class Radio {
 
 
     public int prev() {
-        if (currentStationNum > 1) {
+        if (currentStationNum > 0) {
             currentStationNum = currentStationNum - 1;
+
+            return currentStationNum;
         }
         if (currentStationNum == 0) {
             currentStationNum = 9;

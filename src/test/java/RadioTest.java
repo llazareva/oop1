@@ -25,7 +25,7 @@ class RadioTest {
     @Test
     void next() {
         Radio radio = new Radio();
-        int expected = 1;
+        int expected = 2;
         int actual = radio.next();
         assertEquals(expected, actual);
 
@@ -34,7 +34,7 @@ class RadioTest {
     @Test
     void prev() {
         Radio radio = new Radio();
-        int expected = 9;
+        int expected = 0;
         int actual = radio.prev();
         assertEquals(expected, actual);
 

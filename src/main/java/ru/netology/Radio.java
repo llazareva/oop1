@@ -1,8 +1,11 @@
+package ru.netology;
+
 public class Radio {
 
-    int currentVolume ;
-    int currentStationNum ;
-    int newCurrentStationNum;
+
+    protected int currentVolume;
+    protected int currentStationNum;
+    protected int newCurrentStationNum;
 
 
     public int increaseVolume() {
@@ -47,7 +50,7 @@ public class Radio {
 
     public int setCurrentStationNum(int newCurrentStationNum) {
         if ((newCurrentStationNum >= 0) && (newCurrentStationNum <= 9)) {
-            currentStationNum = newCurrentStationNum ;
+            currentStationNum = newCurrentStationNum;
         }
         return currentStationNum;
     }

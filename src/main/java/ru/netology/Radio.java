@@ -3,10 +3,17 @@ package ru.netology;
 public class Radio {
 
 
-    protected int currentVolume;
-    protected int currentStationNum;
-    protected int newCurrentStationNum;
+    private int currentVolume;
+    private int currentStationNum;
 
+    public int getCurrentVolume(){
+        return currentVolume;
+
+    }
+    public int getCurrentStationNum(){
+        return currentStationNum;
+
+    }
 
     public int increaseVolume() {
         if (currentVolume <= 9) {
@@ -49,10 +56,19 @@ public class Radio {
 
 
     public int setCurrentStationNum(int newCurrentStationNum) {
+
         if ((newCurrentStationNum >= 0) && (newCurrentStationNum <= 9)) {
             currentStationNum = newCurrentStationNum;
         }
         return currentStationNum;
     }
+
+    public int setCurrentVolume(int newCurrentVolume) {
+        if ((newCurrentVolume >= 0) && (newCurrentVolume <= 10)) {
+            currentVolume = newCurrentVolume;
+        }
+        return currentVolume;
+    }
+
 }
 

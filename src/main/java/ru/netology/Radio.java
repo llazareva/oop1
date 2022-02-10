@@ -5,6 +5,16 @@ public class Radio {
 
     private int currentVolume;
     private int currentStationNum;
+    private int numberOfStation = 10;
+
+    public Radio (){
+
+    }
+
+    public Radio(int numberOfStation) {
+
+        this.numberOfStation= numberOfStation;
+    }
 
     public int getCurrentVolume(){
         return currentVolume;
@@ -15,9 +25,13 @@ public class Radio {
 
     }
 
+    public int getNumberOfStation() {
+        return numberOfStation;
+    }
+
     public int increaseVolume() {
-        if (currentVolume <= 9) {
-            currentVolume = currentVolume + 1;
+        if (currentVolume <= 99) {
+            currentVolume = this.currentVolume + 1;
         }
         return currentVolume;
     }
@@ -25,7 +39,7 @@ public class Radio {
 
     public int decreaseVolume() {
         if (currentVolume == 0) {
-            return currentVolume;
+            return currentVolume ;
 
         } else {
             currentVolume = currentVolume - 1;
@@ -35,7 +49,7 @@ public class Radio {
 
 
     public int next() {
-        if (currentStationNum == 9) {
+        if (currentStationNum == (numberOfStation-1)) {
             currentStationNum = 0;
         } else {
 
@@ -47,7 +61,7 @@ public class Radio {
 
     public int prev() {
         if (currentStationNum == 0) {
-            currentStationNum = 9;
+          currentStationNum = numberOfStation-1;
         } else {
             currentStationNum = currentStationNum - 1;
         }
@@ -57,14 +71,14 @@ public class Radio {
 
     public int setCurrentStationNum(int newCurrentStationNum) {
 
-        if ((newCurrentStationNum >= 0) && (newCurrentStationNum <= 9)) {
+        if ((newCurrentStationNum >= 0) && (newCurrentStationNum <= (numberOfStation-1))) {
             currentStationNum = newCurrentStationNum;
         }
         return currentStationNum;
     }
 
     public int setCurrentVolume(int newCurrentVolume) {
-        if ((newCurrentVolume >= 0) && (newCurrentVolume <= 10)) {
+        if ((newCurrentVolume >= 0) && (newCurrentVolume <= 100)) {
             currentVolume = newCurrentVolume;
         }
         return currentVolume;

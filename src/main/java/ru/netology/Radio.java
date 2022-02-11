@@ -5,7 +5,7 @@ public class Radio {
 
     private int currentVolume;
     private int currentStationNum;
-    private int numberOfStation = 10;
+   public int numberOfStation = 10;
 
     public Radio (){
 
